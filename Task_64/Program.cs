@@ -7,6 +7,9 @@
 *
 */
 
+/// Число-признак остановки расчетов
+const int endNumber = 1;
+
 /// Получение целочисленного значения от пользователя с консоли.
 ///     message - сообщение, выводимое пользователю
 int InputInt(string message)
@@ -19,9 +22,9 @@ int InputInt(string message)
 ///     startNumber - стартовое число для вывода
 string GetNumbersLine(int startNumber)
 {
-    if (startNumber == 1)
+    if (startNumber == endNumber)
     {
-        return "1";
+        return startNumber.ToString();
     }
 
     return startNumber.ToString() + ", " + GetNumbersLine(startNumber - 1);
