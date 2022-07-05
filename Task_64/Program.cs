@@ -30,7 +30,7 @@ string GetNumbersLine(int startNumber)
     return startNumber.ToString() + ", " + GetNumbersLine(startNumber - 1);
 }
 
-
+/// Main body.
 int startNumber = InputInt("Input number: ");
 
 if (startNumber <= 0)
